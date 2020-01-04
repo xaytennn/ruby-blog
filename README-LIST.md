@@ -5,4 +5,11 @@
     validates :body, presence: true
 3.  config/routes.rb
     root 'page_posts#index'
-  
+
+
+5.  config/application.rb
+      config.time_zone = 'Novosibirsk'
+      config.i18n.default_locale = :ru
+    config/locales/ru.yml
+      ru:
+        hello: 'Привет'
