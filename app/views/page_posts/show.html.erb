@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('page_posts.show.title') %>:</strong>
   <%= @page_post.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong><%= t('page_posts.show.body') %>:</strong>
   <%= @page_post.body %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong><%= t('page_posts.show.email') %>:</strong>
   <%= @page_post.user.email %>
 </p>
 
-<%= link_to 'Edit', edit_page_post_path(@page_post) %> |
-<%= link_to 'Back', page_posts_path %>
+<%= link_to t('page_posts.show.edit'), edit_page_post_path(@page_post) %> |
+<%= link_to t('page_posts.show.back'), page_posts_path %>

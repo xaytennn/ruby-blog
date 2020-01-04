@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Page Posts</h1>
+<h1><%= t('page_posts.index.posts') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>User</th>
+      <th><%= t('page_posts.index.title') %></th>
+      <th><%= t('page_posts.index.body') %></th>
+      <th><%= t('page_posts.index.email') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= page_post.title %></td>
         <td><%= page_post.body %></td>
         <td><%= page_post.user.email %></td>
-        <td><%= link_to 'Show', page_post %></td>
-        <td><%= link_to 'Edit', edit_page_post_path(page_post) %></td>
-        <td><%= link_to 'Destroy', page_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('page_posts.index.show'), page_post %></td>
+        <td><%= link_to t('page_posts.index.edit'), edit_page_post_path(page_post) %></td>
+        <td><%= link_to t('page_posts.index.destroy'), page_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Page Post', new_page_post_path %>
+<%= link_to t('page_posts.index.new_post'), new_page_post_path %>

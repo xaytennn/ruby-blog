@@ -1,8 +1,7 @@
 <%= form_with(model: page_post, local: true) do |form| %>
   <% if page_post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(page_post.errors.count, "error") %> prohibited this page_post from being saved:</h2>
-
+      <h2><%= pluralize(page_post.errors.count, t('common.errors')) %>:</h2>
       <ul>
         <% page_post.errors.full_messages.each do |message| %>
           <li><%= message %></li>

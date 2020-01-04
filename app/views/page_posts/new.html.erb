@@ -1,5 +1,5 @@
-<h1>New Page Post</h1>
+<h1><%= t('page_posts.new.title') %></h1>
 
 <%= render 'form', page_post: @page_post %>
 
-<%= link_to 'Back', page_posts_path %>
+<%= link_to t('page_posts.new.back'), page_posts_path %>
