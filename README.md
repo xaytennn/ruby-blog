@@ -1,2 +1,2 @@
-# ruby-blog
-ruby-blog
+# Blog Ruby on Rails
+> ruby-blog
