@@ -10,5 +10,10 @@
   <%= @page_post.body %>
 </p>
 
+<p>
+  <strong>Email:</strong>
+  <%= @page_post.user.email %>
+</p>
+
 <%= link_to 'Edit', edit_page_post_path(@page_post) %> |
 <%= link_to 'Back', page_posts_path %>

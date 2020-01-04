@@ -1,5 +1,6 @@
 class PagePostsController < ApplicationController
   before_action :set_page_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /page_posts
   # GET /page_posts.json
@@ -26,6 +27,7 @@ class PagePostsController < ApplicationController
   def create
     @page_post = PagePost.new(page_post_params)
 
+    @page_post.user_id = current_user.id
     respond_to do |format|
       if @page_post.save
         format.html { redirect_to @page_post, notice: 'Page post was successfully created.' }

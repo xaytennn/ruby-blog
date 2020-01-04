@@ -13,3 +13,12 @@
     config/locales/ru.yml
       ru:
         hello: 'Привет'
+6.  app/controllers/application_controller.rb
+      before_action :authenticate_user!
+    app/controllers/page_posts_controller.rb
+      before_action :authenticate_user!, except: [:index, :show]
+      @page_post.user_id = current_user.id
+    app/views/page_posts/index.html.erb
+      <td><%= page_post.user.email %></td>
+    app/views/page_posts/index.html.erb
+      <p> <strong>Email:</strong> <%= @page_post.user.email %> </p>
