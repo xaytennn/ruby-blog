@@ -8,6 +8,7 @@
 <p>
   <strong><%= t('page_posts.show.body') %>:</strong>
   <%= @page_post.body %>
+  <%= image_tag @page_post.image.url(:large), class: 'img-smow' if @page_post.image? %>
 </p>
 
 <p>
