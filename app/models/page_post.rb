@@ -1,0 +1,2 @@
+class PagePost < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Page Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @page_posts.each do |page_post| %>
+      <tr>
+        <td><%= page_post.title %></td>
+        <td><%= page_post.body %></td>
+        <td><%= link_to 'Show', page_post %></td>
+        <td><%= link_to 'Edit', edit_page_post_path(page_post) %></td>
+        <td><%= link_to 'Destroy', page_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Page Post', new_page_post_path %>
