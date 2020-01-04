@@ -1,10 +1,10 @@
-<%= form_with(model: page_post, local: true) do |form| %>
-  <% if page_post.errors.any? %>
+<%= form_for @page_post, local: true, html: {multipart: true} do |form| %>
+  <% if @page_post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(page_post.errors.count, "error") %> prohibited this page_post from being saved:</h2>
+      <h2><%= pluralize(@page_post.errors.count, "error") %> prohibited this page_post from being saved:</h2>
 
       <ul>
-        <% page_post.errors.full_messages.each do |message| %>
+        <% @page_post.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -19,6 +19,10 @@
   <div class="field">
     <%= form.label :body %>
     <%= form.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= form.file_field :image %>
   </div>
 
   <div class="actions">

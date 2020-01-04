@@ -65,12 +65,12 @@ class PagePostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_page_post
-      @page_post = PagePost.find(params[:id])
-    end
+  def set_page_post
+    @page_post = PagePost.find(params[:id])
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def page_post_params
-      params.require(:page_post).permit(:title, :body)
-    end
+  def page_post_params
+    params.require(:page_post).permit(:title, :body, :image)
+  end
 end
