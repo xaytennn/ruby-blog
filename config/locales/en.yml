@@ -30,4 +30,29 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  common:
+    errors: 'errors filling out the form'
+  page_posts:
+    index:
+      posts: 'All posts'
+      title: 'Title'
+      body: 'Content'
+      email: 'User'
+      show: 'Show'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      new_post: 'Create new post'
+    new:
+      title: 'New'
+      create: 'Create'
+      back: 'Back'
+    edit:
+      posts: 'Edit'
+      show: 'Show'
+      back: 'Back'
+    show:
+      title: 'Title'
+      body: 'Content'
+      email: 'User'
+      edit: 'Edit'
+      back: 'Edit'
